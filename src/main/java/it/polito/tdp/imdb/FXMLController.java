@@ -35,7 +35,7 @@ public class FXMLController {
     private Button btnCercaAffini; // Value injected by FXMLLoader
 
     @FXML // fx:id="boxAnno"
-    private ComboBox<?> boxAnno; // Value injected by FXMLLoader
+    private ComboBox<Integer> boxAnno; // Value injected by FXMLLoader
 
     @FXML // fx:id="boxRegista"
     private ComboBox<?> boxRegista; // Value injected by FXMLLoader
@@ -73,10 +73,9 @@ public class FXMLController {
 
     }
     
-   public void setModel(Model model) {
-    	
-    	this.model = model;
-    	
+   public void setModel(Model model) {    	
+    	this.model = model;    	
+    	boxAnno.getItems().setAll(model.boxAnnoCrea());    	
     }
     
 }
